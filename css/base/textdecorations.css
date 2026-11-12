@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* =======================================
+	Text Decorations CSS
+========================================== */
+/* フォントサイズ */
+.fs1-2em {
+	font-size: 1.2em;
+}
+.fs1-3em {
+	font-size: 1.3em;
+}
+.fs1-4em {
+	font-size: 1.4em;
+}
+.fs1-5em {
+	font-size: 1.5em;
+}
+.fs10 {
+	font-size: 10px;
+}
+.fs11 {
+	font-size: 11px;
+}
+.fs12 {
+	font-size: 12px;
+}
+.fs13 {
+	font-size: 13px;
+}
+.fs14 {
+	font-size: 14px;
+}
+.fs15 {
+	font-size: 15px;
+}
+.fs16 {
+	font-size: 16px;
+}
+.fs17 {
+	font-size: 17px;
+}
+.fs18 {
+	font-size: 18px;
+}
+.fs19 {
+	font-size: 19px;
+}
+.fs20 {
+	font-size: 20px;
+}
+.fs22 {
+	font-size: 22px;
+}
+.fs24 {
+	font-size: 24px;
+}
+.fs26 {
+	font-size: 26px;
+}
+.fs28 {
+	font-size: 28px;
+}
+.fs30 {
+	font-size: 30px;
+}
+
+
+/* フォントカラー */
+.lpink {
+	color: #F091A0;/*薄いピンク*/
+}
+.pink {
+	color: #E95377;/*濃いピンク*/
+}
+.lblue, .blue {
+	/*color: #7DB7D4;/*ブルー*/
+	color: #41A0D5;/*ブルー*/
+}
+.dblue {
+	color: #243A75;/*濃いブルー*/
+}
+.orange {
+	color: #F29600;/*オレンジ*/
+}
+.green {
+	color: #44BB4C;/*グリーン*/
+}
+.lgreen {
+	color: #7DBB28;/*ライトグリーン*/
+}
+
+/* フォントウェイト */
+.bld {
+	font-weight: bold;
+}
+.nml {
+	font-weight: normal;
+}
+
+/* 文字間狭く */
+.ls-005 {
+	letter-spacing: -0.05em;
+}
+
+/* 文字間広く */
+.ls05 {
+	letter-spacing: .5em;
+}
+.ls1 {
+	letter-spacing: 1em;
+}
+.ls2 {
+	letter-spacing: 2em;
+}
+.ls3 {
+	letter-spacing: 3em;
+}
+.ls4 {
+	letter-spacing: 4em;
+}
+.ls5 {
+	letter-spacing: 5em;
+}
+

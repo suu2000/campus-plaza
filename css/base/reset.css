@@ -1,0 +1,52 @@
+@charset "utf-8"; 
+
+/* =======================================
+	browser reset CSS
+========================================== */
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, tr, th, td, i, em,
+header, section, article, aside, footer, figure, figcaption, nav, small, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+}
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary { 
+	display: block;
+}
+
+header, footer {
+	clear: both;
+}
+
+img {
+	border: 0;
+	vertical-align: bottom; /* ‰æ‘œ‚Ì‰º‚Ì—]”’‚ð‚È‚­‚· */
+	max-width: 100%;
+}
+
+a img {
+	outline: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+table {
+	border-spacing: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+}
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	appearance: none;
+}
+

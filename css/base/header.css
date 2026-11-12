@@ -1,0 +1,68 @@
+@charset "utf-8"; 
+
+/* =======================================
+	header CSS
+========================================== */
+/* ロゴ・電話番号・お問い合わせ・ご予約
+------------------------------------------ */
+@media screen and (min-width: 1000px) {/* PC */
+	.hLogoCP {
+		float: left;
+		box-sizing: border-box;
+		width: 140px;
+		height: 92px;
+		padding: 9px 0 0 0;
+		margin: 0 30px 0 0;
+	}
+	.hLogoRM {
+		float: left;
+		box-sizing: border-box;
+		width: 246px;
+		height: 92px;
+		padding: 19px 0 0 0;
+	}
+	nav#hnav {
+		float: right;
+		box-sizing: border-box;
+		width: 380px;
+		height: 70px;
+		padding: 11px 0 0 0;
+	}
+	nav#hnav ul.hnav li {
+		float: left;
+	}
+	/*SP用ロゴを非表示に*/
+	.hLogoSp {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {/* TB */
+	.hLogoCP {
+		display: none;
+	}
+	.hLogoRM {
+		display: none;
+	}
+	nav#hnav {
+		display: none;
+	}
+	.hLogoSp {
+		padding: 10px;;
+	}
+}
+@media screen and (max-width: 767px) {/* SP */
+	.hLogoCP {
+		display: none;
+	}
+	.hLogoRM {
+		display: none;
+	}
+	nav#hnav {
+		display: none;
+	}
+	.hLogoSp {
+		padding: 10px;;
+	}
+}
+
+

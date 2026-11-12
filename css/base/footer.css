@@ -1,0 +1,139 @@
+@charset "utf-8"; 
+
+/* =======================================
+	footer CSS
+========================================== */
+/* フッターナビ
+------------------------------------------ */
+@media screen and (min-width: 1000px) {/* PC */
+	section.secFnav {
+		box-sizing: border-box;
+		height: 100px;
+		background: #93716A;/*茶色*/
+		display: flex;/* 内包要素を並列に */
+		align-items: center;/* 内包要素を上下センターに */
+	}
+	nav#fnav ul.fnav {
+		width: 100%;
+		display: flex;/* 内包要素を並列に */
+	}
+	nav#fnav ul.fnav li a {
+		display: flex;/* 内包要素を並列に */
+		align-items: center;/* 内包要素を上下センターに */
+		justify-content: center;/*内包要素を左右センターに */
+		width: 110px;
+		height: 30px;
+		color: #fff;
+	}
+	nav#fnav ul.fnav li.takeout a {
+		width: 120px;
+	}
+	nav#fnav ul.fnav li a:hover {
+		background: #B1A76E;/* 黄土色 */
+		color: #fff;
+	}
+	/* SP＆TB用フッターナビを非表示に */
+	nav#fnavSp {
+		display: none;
+	}
+}
+@media screen and (max-width: 999px) {/* TB & SP */
+	nav#fnavSp {
+	}
+	p#fnavSpBtn {
+		text-align: center;
+		background: #93716A;/*茶色*/
+	}
+	/* ac_menu */
+	ul.fnavSp li a {
+		display: block;
+		padding: 8px;
+		border-top: 1px solid #93716A;/*茶色*/
+		background: #B1A76E;/* 黄土色 */
+		color: #fff;
+	}
+	/* PC用フッターナビを非表示に */
+	section.secFnav {
+		display: none;
+	}
+}
+
+/* フッターロゴエリア
+------------------------------------------ */
+section.secFlogo {
+	text-align: center;
+	box-sizing: border-box;
+}
+section.secFlogo p.moralogy {
+	display: inline-block;
+	padding: 0 1em .5em;
+	border-bottom: 1px solid #888;
+	margin-bottom: 1em;
+}
+section.secFlogo h2.fLogo {
+	margin-bottom: 1em;
+}
+section.secFlogo p.fTel {
+	margin-bottom: .5em;
+}
+@media screen and (min-width: 1000px) {/* PC */
+	section.secFlogo {
+		height: 300px;
+		padding: 50px 0 0;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {/* TB */
+	section.secFlogo {
+		padding: 30px 0;
+	}
+}
+@media screen and (max-width: 767px) {/* SP */
+	section.secFlogo {
+		padding: 20px 0;
+	}
+	h2.flogo {
+		width: 300px;
+	}
+}
+
+/* コピーライト
+------------------------------------------ */
+section.secCopyright {
+	background: #F2F1E8;
+	display: flex;/* 内包要素を並列に */
+	align-items: center;/* 内包要素を上下センターに */
+	justify-content: center;/*内包要素を左右センターに */
+}
+@media screen and (min-width: 1000px) {/* PC */
+	section.secCopyright {
+		height: 100px;
+	}
+}
+@media screen and (max-width: 999px) {/* TB & SP */
+	section.secCopyright {
+		height: 50px;
+	}
+}
+
+/* ページトップへ - page-top.js
+------------------------------------------ */
+#page-top {
+	position: fixed;
+}
+@media screen and (min-width: 1000px) {/* PC */
+	#page-top {
+		bottom: 20px;
+		right: 20px;
+	}
+}
+@media screen and (max-width: 999px) {/* TB & SP */
+	#page-top {
+		bottom: 14px;
+		right: 14px;
+	}
+	#page-top img {
+		width: 50px;
+		height: 50px;
+	}
+}
+

@@ -1,0 +1,9 @@
+
+#contents img { max-width: 100%; height: auto; }
+#contents .map10x6 { height: auto; padding: 0; }
+.restore-note { color: #5b4744; font-size: .9em; }
+.restored-lunch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; justify-items: center; }
+.restored-lunch a { display: block; }
+@media (max-width: 599px) {
+  .restored-lunch { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+}

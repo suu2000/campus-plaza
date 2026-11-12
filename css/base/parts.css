@@ -1,0 +1,619 @@
+@charset "utf-8";
+
+/* =======================================
+	Parts CSS
+	---- INDEX ----
+	00-1. フェードイン（ファーストビュー専用）
+	00-2. スクロールしたらフェードイン（JS連動）
+	01. clearfix
+	02. 箇条書き　ぶら下がりインデント　ulで接頭記号任意のぶら下がりインデント　dlでぶら下がりインデント風に(接頭記号あり/なし)
+	03. 行揃え　指定した文字幅の中で右揃え
+	04. マージン/パディング
+	05. 幅
+	06. オンマウス　非表示　折り返し　ポジション　フロート　行間　文字間
+
+========================================== */
+/* 00-1. フェードイン（ファーストビュー専用）
+------------------------------------------ */
+/* 上から */
+.fadein-top {
+	opacity: 0;
+	animation: fadein-top 1s ease-out forwards;
+}
+@keyframes fadein-top {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* 下から */
+.fadein-bottom {
+	opacity: 0;
+	animation: fadein-bottom 1s ease-out forwards;
+}
+@keyframes fadein-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* 左から */
+.fadein-left {
+	opacity: 0;
+	animation: fadein-left 1s ease-out forwards;
+}
+@keyframes fadein-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+/* 右から */
+.fadein-right {
+	opacity: 0;
+	animation: fadein-right 1s ease-out forwards;
+}
+@keyframes fadein-right {
+	0% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+/* 00-2. スクロールしたらフェードイン（JS連動）
+------------------------------------------ */
+/* 上から */
+.slide-top {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: all 1s ease-out;
+ }
+/* 下から */
+.slide-bottom {
+	opacity: 0;
+	transform: translate(0, 40px);
+	transition: all 1s ease-out;
+ }
+ /* 左から */
+.slide-left {
+	opacity: 0;
+	transform: translate(-20px, 0);
+	transition: all 1s ease-out;
+ }
+/* 右から */
+.slide-right {
+	opacity: 0;
+	transform: translate(20px, 0);
+	transition: all 1s ease-out;
+ }
+/* 遅延 */
+.deley02s {
+	transition-delay: 0.2s;
+}
+.deley04s {
+	transition-delay: 0.4s;
+}
+.deley06s {
+	transition-delay: 0.6s;
+}
+
+/* 01. clearfix
+------------------------------------------ */
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  min-height: 1px;
+}
+* html .clearfix {
+  height: 1px;
+}
+
+/* 02. 箇条書き　ぶら下がりインデント　ulで接頭記号任意のぶら下がりインデント　dlでぶら下がりインデント風に(接頭記号あり/なし)
+------------------------------------------ */
+.decimal {
+	list-style: decimal;
+	margin: 0 0 0 20px;
+}
+.disc {
+	list-style: disc;
+	margin: 0 0 0 20px;
+}
+/*ぶら下がりインデント*/
+.hangIdt {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+/*ulで接頭記号任意のぶら下がりインデント*/
+.kajo1em li {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.kajo2em li {
+	padding-left: 2em;
+	text-indent: -2em;
+}
+.kajo3em li {
+	padding-left: 3em;
+	text-indent: -3em;
+}
+.kajo4em li {
+	padding-left: 4em;
+	text-indent: -4em;
+}
+/* dlで接頭記号●付きのぶら下がりインデント風に */
+.dl2em dt,.dl3em dt,.dl4em dt,.dl5em dt,.dl6em dt,.dl7em dt,.dl8em dt,.dl9em dt,.dl10em dt,.dl11em dt,.dl12em dt,.dl13em dt,.dl14em dt,.dl15em dt {
+    font-weight: 500;
+}
+.dl2em dt::before,.dl3em dt::before,.dl4em dt::before,.dl5em dt::before,.dl6em dt::before,.dl7em dt::before,.dl8em dt::before,.dl9em dt::before,.dl10em dt::before,.dl11em dt::before,.dl12em dt::before,.dl13em dt::before,.dl14em dt::before,.dl15em dt::before {
+	content: "●";
+	color: #E5004F;/* コーポレートピンク */
+	padding-right: .1em;
+}
+.dl2em dd,.dl3em dd,.dl4em dd,.dl5em dd,.dl6em dd,.dl7em dd,.dl8em dd,.dl9em dd,.dl10em dd,.dl11em dd,.dl12em dd,.dl13em dd,.dl14em dd,.dl15em dd {
+	margin: -1.6em 0 0 0;
+}
+.dl2em dd { padding-left: 2em; }
+.dl3em dd { padding-left: 3em; }
+.dl4em dd { padding-left: 4em; }
+.dl5em dd { padding-left: 5em; }
+.dl6em dd { padding-left: 6em; }
+.dl7em dd { padding-left: 7em; }
+.dl8em dd { padding-left: 8em; }
+.dl9em dd { padding-left: 9em; }
+.dl10em dd { padding-left: 10em; }
+.dl11em dd { padding-left: 11em; }
+.dl12em dd { padding-left: 12em; }
+.dl13em dd { padding-left: 13em; }
+.dl14em dd { padding-left: 14em; }
+.dl15em dd { padding-left: 15em; }
+@media screen and (max-width: 767px) {
+     .dl2em dd,.dl3em dd,.dl4em dd,.dl5em dd,.dl6em dd,.dl7em dd,.dl8em dd,.dl9em dd,.dl10em dd,.dl11em dd,.dl12em dd,.dl13em dd,.dl14em dd,.dl15em dd {
+        margin: 0 0 0 0;
+        padding-left: 1em; 
+    }
+}
+/* dlで接頭記号なしのぶら下がりインデント風に */
+.dl2em-nb dt,.dl3em-nb dt,.dl4em-nb dt,.dl5em-nb dt,.dl6em-nb dt,.dl7em-nb dt,.dl8em-nb dt,.dl9em-nb dt,.dl10em-nb dt,.dl11em-nb dt,.dl12em-nb dt,.dl13em-nb dt,.dl14em-nb dt,.dl15em-nb dt {
+}
+.dl2em-nb dd,.dl3em-nb dd,.dl4em-nb dd,.dl5em-nb dd,.dl6em-nb dd,.dl7em dd,.dl8em-nb dd,.dl9em-nb dd,.dl10em-nb dd,.dl11em-nb dd,.dl12em-nb dd,.dl13em-nb dd,.dl14em-nb dd,.dl15em-nb dd {
+	margin: -1.6em 0 0 0;
+}
+.dl2em-nb dd { padding-left: 2em; }
+.dl3em-nb dd { padding-left: 3em; }
+.dl4em-nb dd { padding-left: 4em; }
+.dl5em-nb dd { padding-left: 5em; }
+.dl6em-nb dd { padding-left: 6em; }
+.dl7em-nb dd { padding-left: 7em; }
+.dl8em-nb dd { padding-left: 8em; }
+.dl9em-nb dd { padding-left: 9em; }
+.dl10em-nb dd { padding-left: 10em; }
+.dl11em-nb dd { padding-left: 11em; }
+.dl12em-nb dd { padding-left: 12em; }
+.dl13em-nb dd { padding-left: 13em; }
+.dl14em-nb dd { padding-left: 14em; }
+.dl15em-nb dd { padding-left: 15em; }
+@media screen and (max-width: 767px) {
+     .dl2em-nb dd,.dl3em-nb dd,.dl4em-nb dd,.dl5em-nb dd,.dl6em-nb dd,.dl7em-nb dd,.dl8em-nb dd,.dl9em-nb dd,.dl10em-nb dd,.dl11em-nb dd,.dl12em-nb dd,.dl13em-nb dd,.dl14em-nb dd,.dl15em-nb dd {
+        margin: 0 0 0 0;
+        padding-left: 1em; 
+    }
+}
+
+/* 03. 行揃え　指定した文字幅の中で右揃え
+------------------------------------------ */
+.alnL {
+	text-align: left;
+}
+.alnR {
+	text-align: right;
+}
+.alnC {
+	text-align: center;
+}
+.alnJ {
+	text-align: justify;
+}
+/* 指定した文字幅の中で右揃え */
+.w4emAlnR {/*4文字*/
+	display: inline-block;
+	width: 4em;
+	text-align: right;
+}
+/* 画像の行揃え */
+.alignleft {
+	display: block;
+	margin:0 auto 0 0;
+}
+.aligncenter {
+	display: block;
+	margin:0 auto 0 auto;
+}
+.alignright {
+	display: block;
+	margin:0 0 0 auto;
+}
+
+/* 04. マージン/パディング
+------------------------------------------ */
+/* マージンtop */
+.mt40 {
+	margin-top: 40px;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mt05 {
+	margin-top: 5px;
+}
+.mt3em {
+	margin-top: 3em;
+}
+.mt2em {
+	margin-top: 2em;
+}
+.mt1em {
+	margin-top: 1em;
+}
+
+/*マージンbottom*/
+.mb40 {
+	margin-bottom: 40px;
+}
+.mb30 {
+	margin-bottom: 30px;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.mb05 {
+	margin-bottom: 5px;
+}
+.mb3em {
+	margin-bottom: 3em;
+}
+.mb2em {
+	margin-bottom: 2em;
+}
+.mb1em {
+	margin-bottom: 1em;
+}
+
+/*マージンleft*/
+.ml40 {
+	margin-left: 40px;
+}
+.ml30 {
+	margin-left: 30px;
+}
+.ml20 {
+	margin-left: 20px;
+}
+.ml10 {
+	margin-left: 10px;
+}
+.ml05 {
+	margin-left: 5px;
+}
+.ml3em {
+	margin-left: 3em;
+}
+.ml2em {
+	margin-left: 2em;
+}
+.ml1em {
+	margin-left: 1em;
+}
+
+/*マージンright*/
+.mr40 {
+	margin-right: 40px;
+}
+.mr30 {
+	margin-right: 30px;
+}
+.mr20 {
+	margin-right: 20px;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.mr05 {
+	margin-right: 5px;
+}
+.mr3em {
+	margin-right: 3em;
+}
+.mr2em {
+	margin-right: 2em;
+}
+.mr1em {
+	margin-right: 1em;
+}
+
+/* パディングtop */
+.pt3em {
+	padding-top: 3em;
+}
+.pt2em {
+	padding-top: 2em;
+}
+.pt1em {
+	padding-top: 1em;
+}
+/* パディングbottom */
+.pb3em {
+	padding-bottom: 3em;
+}
+.pb2em {
+	padding-bottom: 2em;
+}
+.pb1em {
+	padding-bottom: 1em;
+}
+
+/* パディングleft */
+.pl3em {
+	padding-left: 3em;
+}
+.pl2em {
+	padding-left: 2em;
+}
+.pl1em {
+	padding-left: 1em;
+}
+
+/* パディングright */
+.pr3em {
+	padding-right: 3em;
+}
+.pr2em {
+	padding-right: 2em;
+}
+.pr1em {
+	padding-right: 1em;
+}
+
+
+/* 05. 幅
+------------------------------------------ */
+.w05per {
+	width: 5%;
+}
+.w10per {
+	width: 10%;
+}
+.w15per {
+	width: 15%;
+}
+.w20per {
+	width: 20%;
+}
+.w25per {
+	width: 25%;
+}
+.w30per {
+	width: 30%;
+}
+.w35per {
+	width: 35%;
+}
+.w40per {
+	width: 40%;
+}
+.w44per {
+	width: 45%;
+}
+.w50per {
+	width: 50%;
+}
+.w55per {
+	width: 55%;
+}
+.w60per {
+	width: 60%;
+}
+.w65per {
+	width: 65%;
+}
+.w70per {
+	width: 70%;
+}
+.w75per {
+	width: 75%;
+}
+.w80per {
+	width: 80%;
+}
+.w85per {
+	width: 85%;
+}
+.w90per {
+	width: 90%;
+}
+.w95per {
+	width: 95%;
+}
+.w100per {
+	width: 100%;
+}
+@media screen and (max-width: 767px) {
+	.w10per-sp {
+		width: 10%;
+	}
+	.w20per-sp {
+		width: 20%;
+	}
+	.w30per-sp {
+		width: 30%;
+	}
+	.w40per-sp {
+		width: 40%;
+	}
+	.w50per-sp {
+		width: 50%;
+	}
+	.w60per-sp {
+		width: 60%;
+	}
+	.w70per-sp {
+		width: 70%;
+	}
+	.w80per-sp {
+		width: 80%;
+	}
+	.w90per-sp {
+		width: 90%;
+	}
+	.w100per-sp {
+		width: 100%;
+	}
+}
+
+/* 06. オンマウス　非表示　折り返し　ポジション　フロート　行間　文字間
+------------------------------------------ */
+/* オンマウス */
+.mOver {
+	cursor: pointer;
+}
+/* 非表示 */
+.dspno {
+	display: none;
+}
+/* sp */
+@media screen and (max-width: 767px) {
+	.dspno_sp {
+		display: none;
+	}
+}
+/* tb */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	.dspno_tb {
+		display: none;
+	}
+}
+/* pc */
+@media screen and (min-width: 1000px) {
+	.dspno_pc {
+		display: none;
+	}
+}
+
+/* 折り返し */
+/* しない */
+.nowrap {
+	white-space: nowrap;
+}
+/* する */
+.br:before {
+	content: "\A" ;
+	white-space: pre ;
+}	
+/* する（sp） */
+@media screen and (max-width: 767px) {
+	.br_sp:before {
+		content: "\A" ;
+		white-space: pre ;
+	}	
+}
+/* する（tb） */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	.br_tb:before {
+		content: "\A" ;
+		white-space: pre ;
+	}	
+}
+/* する（pc） */
+@media screen and (min-width: 1000px) {
+	.br_pc:before {
+		content: "\A" ;
+		white-space: pre ;
+	}	
+}
+
+/* ポジション */
+.posRel {
+	position: relative;
+}
+.posAbs {
+	position: absolute;
+}
+.posFix {
+	position: fixed;
+}
+
+/* フロート */
+.flL {
+	float: left;
+}
+.flR {
+	float: right;
+}
+.clr {
+	clear: both;
+}
+
+/* 行間 */
+.lh1 {
+	line-height: 1;
+}
+.lh1-2 {
+	line-height: 1.2;
+}
+.lh1-3 {
+	line-height: 1.3;
+}
+.lh1-4 {
+	line-height: 1.4;
+}
+.lh1-5 {
+	line-height: 1.5;
+}
+.lh1-6 {
+	line-height: 1.6;
+}
+.lh1-7{
+	line-height: 1.7;
+}
+.lh1-8 {
+	line-height: 1.8;
+}
+.lh1-8 {
+	line-height: 1.9;
+}
+.lh2 {
+	line-height: 2;
+}
+
+/* 文字間 */
+.ls1em {
+	letter-spacing: 1em;
+}

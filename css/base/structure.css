@@ -1,0 +1,137 @@
+@charset "utf-8"; 
+
+/* =======================================
+	structure CSS
+========================================== */
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 400;
+	color: #000;
+}
+/* リンク */
+a {
+	color: #000;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: #93716A;/*茶色*/
+}
+
+/* 767px以下（スマホのみ　※iPadは除外） */
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 15px;
+		line-height: 1.6;
+	}
+	#wrapper {
+		overflow: hidden;/*スマホで右側の謎の余白を消す【必須】*/
+		position: relative;
+	}
+	/* ヘッダーインナー */
+	#headerInner {
+		position: relative;
+	}
+	/* コンテンツインナー */
+	.contentsInner {
+		position: relative;
+		padding: 0 15px;
+	}
+	/* フッターインナー */
+	.footerInner {
+		position: relative;
+	}
+}
+/* 768px - 999px以下（タブレット縦　※iPad以上　※大型タブレットとパソコンは除外）
+------------------------------------------ */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	body {
+		min-width: 768px;/*タブレットで背景画像の右側が切れないようにするためページ幅と同じ値を指定（viewport対応）*/
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	#wrapper {
+		overflow: hidden;/*スマホで右側の謎の余白を消す【必須】*/
+		position: relative;
+	}
+	/* ヘッダーインナー */
+	#headerInner {
+		position: relative;
+	}
+	/* コンテンツインナー */
+	.contentsInner {
+		box-sizing: border-box;
+		width: 768px;
+		padding: 0 20px;
+		margin: 0 auto;
+	}
+	/* フッターインナー */
+	.footerInner {
+		position: relative;
+	}
+}
+/* 1000px以上（パソコンと大型タブレット） */
+@media screen and (min-width: 1000px) {
+	/* 構造 */
+	html {
+		height: 100%;/*フッターを常に画面下に表示させるため*/
+	}
+	body {
+		font-size: 16px;
+		line-height: 1.6;
+		height: 100%;/*フッターを常に画面下に表示させるため*/
+		min-width: 1000px;/*タブレットで背景画像の右側が切れないようにするためページ幅と同じ値を指定（viewport対応）*/
+	}
+	#wrapper {
+		width: 100%;
+		min-height: 100%;/*フッターを常に画面下に表示させるため*/
+		height: auto;/*フッターを常に画面下に表示させるため*/
+		position: relative;/*フッターを常に画面下に表示させるため*/
+	}
+	/* ヘッダー */
+	header {
+		width: 100%;
+		height: 136px;
+		background: linear-gradient(#fff, #fff 92px, #93716A 92px, #93716A);
+		position: fixed;/*ヘッダーを上部に固定*/
+		top: 0;
+		z-index: 100;
+	}
+	/* ヘッダーインナー */
+	#headerInner {
+		width: 1000px;
+		height: 136px;
+		margin: 0 auto;
+		position: relative;
+	}
+	/* コンテンツ */
+	#topcontents,/*トップページのみ*/
+    #contents/*下層ページ*/ {
+		width: 100%;
+		margin-top: 136px;/*ヘッダー分あける*/
+		padding-bottom: 500px;/*フッターを常に画面下に表示させるためフッターと同じ高さを指定*/
+	}
+	/* コンテンツインナー */
+	.contentsInner {
+		width: 1000px;
+		margin: 0 auto;
+		position: relative;
+	}
+	/* フッター */
+	footer {
+		box-sizing: border-box;
+		width: 100%;
+		height: 500px;/* 100px+300px+100px */
+		position: absolute;/*フッターを常に画面下に表示させるため*/
+		bottom: 0;/*フッターを常に画面下に表示させるため*/
+		left: 0;/*フッターを常に画面下に表示させるため*/
+	}
+	/* フッターインナー */
+	.footerInner {
+		width: 1000px;
+		margin: 0 auto;
+		position: relative;
+	}
+}
